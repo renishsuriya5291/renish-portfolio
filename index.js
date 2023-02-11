@@ -14,6 +14,10 @@ const staticPath = path.join(__dirname,'public' )
 // built in middleware 
 app.use(express.static(staticPath));
 
+app.get('/static',()=> {
+    res.send("hello");
+})
+
 app.post('/', async (req,res)=>{
   
   const {name, phone, email, subject, message} = req.body;
