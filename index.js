@@ -5,7 +5,7 @@ require('./conn');
 const User = require('./model/userSchema')
 const app = express()
 dotenv.config({ path: "config.env" });
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 
 app.use(express.json());
